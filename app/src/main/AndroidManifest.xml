@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.playhard.studentmgr">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/netword_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".firstHomeWork.ActivityStudent"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".firstHomeWork.MainActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".firstHomeWork.MainActivity$ListViewActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".secondHomeWork.ActivityMain"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:name=".secondHomeWork.ActivityStudent2"
+            android:configChanges="orientation|screenSize"
+            android:label="添加信息"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".thirdAndFourthHomeWork.ActivityLogin"
+            android:configChanges="orientation|screenSize"
+            android:label="WuZhiJing"
+            android:theme="@style/AppTheme2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".thirdAndFourthHomeWork.ActivityMain"
+            android:configChanges="orientation|screenSize"
+            android:label="三年一班"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".FifthHomeWork.adActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".SixthHomeWork.FirstActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".SixthHomeWork.SecondActivity"
+            android:theme="@style/AppTheme2" />
+        <activity
+            android:name=".SixthHomeWork.ThirdActivity"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity
+            android:name=".SixthHomeWork.FourthActivity"
+            android:theme="@style/AppTheme2" />
+        <activity android:name=".seventhHomeWork.ActivityPhonePlace">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".eighthHonmeWork.ActivityConfig" />
+
+    </application>
+
+</manifest>

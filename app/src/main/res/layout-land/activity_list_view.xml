@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ListView
+        android:id="@+id/lvw1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:listSelector="@drawable/list_item">
+
+    </ListView>
+    <!--<Button-->
+        <!--android:id="@+id/backToMain"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:text="返回"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textSize="20sp"-->
+        <!--&lt;!&ndash;/>&ndash;&gt;-->
+    <!--<android.support.v7.widget.RecyclerView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/colorblue">-->
+
+    <!--</android.support.v7.widget.RecyclerView>-->
+    <!--<com.jcodecraeer.xrecyclerview.XRecyclerView-->
+        <!--android:layout_width=""-->
+        <!--android:layout_height=""></com.jcodecraeer.xrecyclerview.XRecyclerView>-->
+
+</LinearLayout>

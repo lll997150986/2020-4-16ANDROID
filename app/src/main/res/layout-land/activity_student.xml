@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.playhard.studentmgr.firstHomeWork.ActivityStudent"
+    android:orientation="vertical"
+    android:background="@drawable/bg_img2">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        ></LinearLayout>
+    <!--一分为三，三分之二为控件-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <!--logo-->
+        <RelativeLayout
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <View
+                android:layout_width="220dp"
+                android:layout_height="50dp"
+                android:background="@drawable/logo"/>
+        </RelativeLayout>
+
+        <!--表单-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="35dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp">
+
+            <EditText
+                android:id="@+id/username_first"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="16sp"
+                android:hint="姓名"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:background="@drawable/bg_username"
+                android:drawableLeft="@drawable/addpeople_fill1"
+                android:drawablePadding="15dp"
+                android:focusable="true"/>
+
+
+            <EditText
+                android:id="@+id/student_num_first"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/username_first"
+                android:textSize="16sp"
+                android:hint="学号"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+
+                android:inputType="number"
+                android:singleLine="true"
+                android:background="@drawable/bg_username"
+                android:drawableLeft="@drawable/group"
+                android:drawablePadding="15dp"/>
+
+
+
+            <RadioGroup
+                android:id="@+id/sex_first"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/student_num_first"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:onClick="setListeners">
+
+                <RadioButton
+                    android:id="@+id/man_first"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="男"
+                    android:textAlignment="center"
+                    android:button="@null"
+                    android:checked="true"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:background="@drawable/selector_orange_radiobutton"/>
+                <RadioButton
+                    android:id="@+id/woman_first"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="女"
+                    android:textAlignment="center"
+                    android:button="@null"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:background="@drawable/selector_orange_radiobutton"/>
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/falculty_first"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/sex_first"
+                android:tooltipText="学院"
+                android:textSize="16sp"
+                android:prompt="@array/faculty"
+                android:textAlignment="center"
+                android:entries="@array/faculty"
+                android:background="@drawable/selector_orange_radiobutton"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+
+
+            <Button
+                android:id="@+id/loginbtn_first"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_below="@id/falculty_first"
+                android:layout_marginTop="25dp"
+                android:textSize="16sp"
+                android:text="登录"
+                android:textColor="#F7F7F7"
+                android:background="@drawable/btn_login"
+                android:onClick="setListeners"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/loginbtn_first"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/fail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:text="无法登录？"
+                    android:background="@drawable/wrong_login"
+                    android:onClick="setListeners"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.playhard.studentmgr.secondHomeWork.ActivityStudent2"
+    android:orientation="vertical"
+    android:background="@drawable/bg_img2"
+    android:id="@+id/addlay">
+<android.support.v7.widget.Toolbar
+    android:id="@+id/addTb"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/colorPrimary"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        ></LinearLayout>
+    <!--一分为三，三分之二为控件-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        >
+
+        <!--logo-->
+        <RelativeLayout
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+            <View
+                android:layout_width="220dp"
+                android:layout_height="50dp"
+                android:background="@drawable/logo"/>
+        </RelativeLayout>
+
+        <!--表单-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="35dp"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp">
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="16sp"
+                android:hint="姓名"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:singleLine="true"
+                android:background="@drawable/bg_username"
+                android:drawableLeft="@drawable/addpeople_fill1"
+                android:drawablePadding="15dp"
+                android:focusable="true"/>
+
+
+            <EditText
+                android:id="@+id/student_num"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/username"
+                android:textSize="16sp"
+                android:hint="学号"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+
+                android:inputType="number"
+                android:singleLine="true"
+                android:background="@drawable/bg_username"
+                android:drawableLeft="@drawable/group"
+                android:drawablePadding="15dp"/>
+
+
+
+            <RadioGroup
+                android:id="@+id/sex"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_below="@id/student_num"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/man"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="男"
+                    android:textAlignment="center"
+                    android:button="@null"
+                    android:checked="true"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:background="@drawable/selector_orange_radiobutton"/>
+                <RadioButton
+                    android:id="@+id/woman"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="女"
+                    android:textAlignment="center"
+                    android:button="@null"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:background="@drawable/selector_orange_radiobutton"/>
+            </RadioGroup>
+
+            <Spinner
+                android:id="@+id/falculty"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/sex"
+                android:tooltipText="学院"
+                android:textSize="16sp"
+                android:prompt="@array/faculty"
+                android:textAlignment="center"
+                android:entries="@array/faculty"
+                android:background="@drawable/selector_orange_radiobutton"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+
+            <Spinner
+                android:id="@+id/special"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/falculty"
+                android:tooltipText="专业"
+                android:textSize="16sp"
+                android:prompt="@array/cspecial"
+                android:textAlignment="center"
+                android:entries="@array/cspecial"
+                android:background="@drawable/selector_orange_radiobutton"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"/>
+
+
+
+            <LinearLayout
+                android:id="@+id/hobby"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal"
+                android:layout_below="@id/lybirth"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <CheckBox
+                android:id="@+id/liture"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="文学"
+                android:textSize="16sp"
+                    android:layout_weight="1"
+                />
+                <CheckBox
+                    android:id="@+id/pe"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="体育"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    />
+                <CheckBox
+                    android:id="@+id/music"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="音乐"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    />
+                <CheckBox
+                    android:id="@+id/art"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:text="美术"
+                    android:textSize="16sp"
+                    android:layout_weight="1"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lybirth"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/special"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:text="选择生日"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="left" />
+                <!--<Button-->
+                <!--android:id="@+id/birthText"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:textSize="18sp"-->
+                <!--android:clickable="false"-->
+                <!--android:paddingLeft="10dp"-->
+                <!--android:paddingRight="20dp"-->
+                <!--android:textColor="@color/colorBlack"-->
+                <!--android:background="@drawable/selector_orange_radiobutton"-->
+                <!--/>-->
+                <Button
+                    android:id="@+id/birthBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:text="点击选择"
+                    android:textColor="@color/colorBlack"
+                    android:gravity="center"
+                    android:background="@drawable/selector_orange_radiobutton"/>
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_below="@id/hobby"
+                android:layout_marginTop="20dp"
+                android:textSize="16sp"
+                android:text="提交"
+                android:textColor="#F7F7F7"
+                android:background="@drawable/btn_login"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -21,5 +21,6 @@
     <color name="colorwhite">#FFFFFF</color>
     <color name="colorTran">#00000000</color>
     <color name="colorOran">#99FF9900</color>
+    <color name="colorDiagGray">#EEEEEE</color>
 
 </resources>

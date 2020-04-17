@@ -8,6 +8,7 @@ import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -15,10 +16,16 @@ import android.widget.TextView;
 
 import com.playhard.studentmgr.FifthHomeWork.adActivity;
 import com.playhard.studentmgr.R;
+import com.playhard.studentmgr.dao.StudentInfoDao;
+import com.playhard.studentmgr.domain.User;
+import com.playhard.studentmgr.util.DataUtil;
 import com.playhard.studentmgr.util.PictureCuter;
 import com.playhard.studentmgr.util.ToastUtil;
 
 import org.litepal.LitePal;
+
+import java.util.List;
+
 public class ActivityLogin extends AppCompatActivity {
     private Button lbtn;
     private ProgressBar bar;
@@ -26,9 +33,17 @@ public class ActivityLogin extends AppCompatActivity {
     private Intent intent;
     private Toolbar loginTb;
     TextView name_text,pass_text;
+    private final String XMLPREFERENCEPATH="com.playhard.studentmgr_preferences";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        createDataBase();
+        insertOneAndQueryOne();
+
+
+
         setContentView(R.layout.activity_login);
         loginTb = findViewById(R.id.loginTb);
         setSupportActionBar(loginTb);
@@ -83,5 +98,27 @@ public class ActivityLogin extends AppCompatActivity {
         name_text.setCompoundDrawables(PictureCuter.drawable,null,null,null);
         PictureCuter.setDrawable(this,R.drawable.group,0,0,50,50);
         pass_text.setCompoundDrawables(PictureCuter.drawable,null,null,null);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        String[] data = {"username","password"};
+        DataUtil.dataRecovery(this,XMLPREFERENCEPATH,MODE_PRIVATE,data,name_text,pass_text);
+    }
+
+
+    private void insertOneAndQueryOne(){
+        User user = new User();
+        user.setUsername("zhangsan");
+        user.setPassword("123456");
+        StudentInfoDao.insertUser(user);
+        List<User> users = StudentInfoDao.findByUsername(user.getUsername());
+        ToastUtil.putMessage(this,"插入的用户信息"+users.get(0));
+        Log.d(TAG, "insertOneAndQueryOne: user:"+users.get(0));
+
+    }
+    private void createDataBase(){
+        StudentInfoDao.createDatabase(this);
     }
 }

@@ -13,4 +13,23 @@
         <item name="android:colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="android:colorAccent">@color/colorAccent</item>
     </style>
+
+        <style name="AlertDialogCustom" parent="@*android:style/AlertDialog">
+            <!--&lt;!&ndash;是否有边框&ndash;&gt;-->
+            <!--<item name="android:windowFrame">@null</item>-->
+            <!--&lt;!&ndash;是否有标题&ndash;&gt;-->
+            <!--<item name="android:windowNoTitle">true</item>-->
+            <!--背景颜色-->
+            <item name="android:windowBackground">@color/colorDiagGray</item>
+            <!--是否浮动-->
+            <item name="android:windowIsFloating">true</item>
+
+            <!--&lt;!&ndash;是否允许背景变暗&ndash;&gt;-->
+            <!--<item name="android:backgroundDimEnabled">true</item>-->
+            <!--&lt;!&ndash;是否透明的&ndash;&gt;-->
+            <!--<item name="android:windowIsTranslucent">true</item>-->
+            <!--&lt;!&ndash;动画&ndash;&gt;-->
+            <!--<item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>-->
+        </style>
+
 </resources>

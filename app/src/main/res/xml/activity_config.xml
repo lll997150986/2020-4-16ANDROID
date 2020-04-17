@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+    <PreferenceCategory
+        android:key="info"
+        android:summary="关于"
+        android:title="相关信息">
+        <Preference
+            android:key="info_tent"
+            android:summary="随便写写一段简单的介绍。。"
+            android:title="" />
+    </PreferenceCategory>
+
+
+
+    <PreferenceCategory
+        android:key="user_info"
+        android:summary="个人信息"
+        android:title="账号与安全">
+        <EditTextPreference
+            android:key="username"
+            android:title="修改用户名"
+            android:summary="新用户名" />
+        <EditTextPreference
+            android:key="password"
+            android:title="修改密码"
+            android:summary="***********"/>
+
+    </PreferenceCategory>
+
+
+
+
+
+    <PreferenceCategory
+        android:key="general"
+        android:summary="通用设置"
+        android:title="通用设置">
+        <SwitchPreference
+            android:key="v_h_mode"
+            android:title="横竖屏设置"
+            android:defaultValue="false"
+            android:summaryOn="横屏"
+            android:summaryOff="竖屏" />
+
+                <Preference
+                    android:key="fontSize"
+                    android:summary="10"
+                    android:title="字体大小"
+                    android:layout="@layout/myseekbar" />
+        </PreferenceCategory>
+
+
+
+
+
+
+
+</PreferenceScreen>

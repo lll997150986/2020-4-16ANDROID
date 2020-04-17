@@ -29,6 +29,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.TextView;
 
 import com.playhard.studentmgr.eighthHonmeWork.ActivityConfig;
 import com.playhard.studentmgr.R;
@@ -36,8 +37,11 @@ import com.playhard.studentmgr.SixthHomeWork.FirstActivity;
 import com.playhard.studentmgr.adapter.MyListAdapter;
 import com.playhard.studentmgr.dao.StudentInfoDao;
 import com.playhard.studentmgr.domain.StudentInfo;
+import com.playhard.studentmgr.eighthHonmeWork.BaiDuMapActivity;
+import com.playhard.studentmgr.eighthHonmeWork.FriendInfoActivity;
 import com.playhard.studentmgr.secondHomeWork.ActivityStudent2;
 import com.playhard.studentmgr.seventhHomeWork.ActivityPhonePlace;
+import com.playhard.studentmgr.util.ComponentUtil;
 import com.playhard.studentmgr.util.PreferencesUtil;
 import com.playhard.studentmgr.util.ToastUtil;
 
@@ -94,10 +98,14 @@ public class ActivityMain extends AppCompatActivity  implements View.OnTouchList
                     nav_intent = new Intent(ActivityMain.this, ActivityConfig.class);
                     startActivity(nav_intent);
                 }
-//                else if (item.toString().contains("位置")){
-//                    nav_intent = new Intent(ActivityMain.this, MapsActivity.class);
-//                    startActivity(nav_intent);
-//                }
+                else if (item.toString().contains("好友")){
+                    nav_intent = new Intent(ActivityMain.this, FriendInfoActivity.class);
+                    startActivity(nav_intent);
+                }
+                else if (item.toString().contains("位置")){
+                    nav_intent = new Intent(ActivityMain.this, BaiDuMapActivity.class);
+                    startActivity(nav_intent);
+                }
                 return  true;
             }
         });
@@ -397,5 +405,14 @@ public class ActivityMain extends AppCompatActivity  implements View.OnTouchList
         searchPanelInit();
         setMyAdapter(ActivityMain.this,infoList);
         setLongItemListenerPanel(infoList);//代码局部分离，方便查询时复用
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        setMyAdapter(ActivityMain.this,infoList);
+
+
+
     }
 }

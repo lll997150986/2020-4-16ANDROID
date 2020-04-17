@@ -4,6 +4,16 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!--baiduMao-->
+    <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+    <!--<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />-->
+    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
+    <!--<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />-->
+    <!--<uses-permission android:name="android.permission.WAKE_LOCK" />-->
+
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
          Google Maps Android API v2, but you must specify either coarse or fine
@@ -77,7 +87,13 @@
             </intent-filter>
         </activity>
         <activity android:name=".eighthHonmeWork.ActivityConfig" />
+        <activity
+            android:name=".eighthHonmeWork.FriendInfoActivity"
+            android:theme="@style/AppTheme2" />
+        <activity android:name=".eighthHonmeWork.BaiDuMapActivity"></activity>
+
 
     </application>
+
 
 </manifest>

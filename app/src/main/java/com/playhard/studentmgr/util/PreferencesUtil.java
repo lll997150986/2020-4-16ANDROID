@@ -18,4 +18,10 @@ public class PreferencesUtil {
         editor.clear();
         editor.commit();
     }
+    public static void clear(Context context,String xmltag) {
+        SharedPreferences preferences = context.getSharedPreferences(xmltag, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.clear();
+        editor.commit();
+    }
 }

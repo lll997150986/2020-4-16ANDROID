@@ -11,6 +11,8 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.playhard.studentmgr.R;
 import com.playhard.studentmgr.domain.StudentInfo;
+import com.playhard.studentmgr.eighthHonmeWork.ActivityConfig;
+import com.playhard.studentmgr.util.ComponentUtil;
 
 import java.util.List;
 
@@ -28,6 +30,7 @@ public class MyListAdapter extends BaseAdapter {
     public MyListAdapter(Context mContext ,List<StudentInfo> list) {
         this.mContext = mContext;
         this.list=list;
+
     }
     @Override
     public int getCount() {
@@ -57,6 +60,13 @@ public class MyListAdapter extends BaseAdapter {
         public TextView tv_spec;
         public TextView tv_hob;
         public TextView tv_birth;
+        public TextView tag_name;
+        public TextView tag_birth ;
+        public TextView tag_falc ;
+        public TextView tag_spec;
+        public TextView tag_sex ;
+        public TextView tag_hob ;
+        public TextView tag_num ;
         public View layout;
     }
 
@@ -90,12 +100,41 @@ public class MyListAdapter extends BaseAdapter {
             viewHolder.tv_hob = view.findViewById(R.id.tv_hob);
             viewHolder.tv_birth = view.findViewById(R.id.tv_birth);
             viewHolder.layout = view.findViewById(R.id.lay);
+            viewHolder.tag_name =view.findViewById(R.id.tag_name);
+            viewHolder.tag_birth =view.findViewById(R.id.tag_birth);
+            viewHolder.tag_falc =view.findViewById(R.id.tag_falc);
+            viewHolder.tag_spec =view.findViewById(R.id.tag_spec);
+            viewHolder.tag_sex =view.findViewById(R.id.tag_sex);
+            viewHolder.tag_hob =view.findViewById(R.id.tag_hob);
+            viewHolder.tag_num =view.findViewById(R.id.tag_num);
+
             viewHolder.tv_name.setText(info.getName().toString());
             viewHolder.tv_num.setText(info.getNum().toString());
             viewHolder.tv_sex.setText(info.getSex().toString());
             viewHolder.tv_falc.setText(info.getFalculty().toString());
             viewHolder.tv_spec.setText(info.getSpecial().toString());
             viewHolder.tv_hob.setText(info.getHobby().toString());
+
+            viewHolder.tv_num.setText(info.getNum().toString());
+            viewHolder.tv_sex.setText(info.getSex().toString());
+            viewHolder.tv_falc.setText(info.getFalculty().toString());
+            viewHolder.tv_spec.setText(info.getSpecial().toString());
+            viewHolder.tv_hob.setText(info.getHobby().toString());
+
+            ComponentUtil.changeTVFontSize(viewHolder.tv_birth,
+                                            viewHolder.tv_name,
+                                            viewHolder.tv_num,
+                                            viewHolder.tv_falc,
+                                            viewHolder.tv_spec,
+                                            viewHolder.tv_hob,
+                                            viewHolder.tv_sex);
+            ComponentUtil.changeTVFontSize(viewHolder.tag_name,
+                                            viewHolder.tag_birth,
+                                            viewHolder.tag_falc,
+                                            viewHolder.tag_hob,
+                                            viewHolder.tag_sex,
+                                            viewHolder.tag_spec,
+                                            viewHolder.tag_num);
             if (viewHolder.tv_birth!=null){
                 viewHolder.tv_birth.setText(info.getBirth().toString());
             }

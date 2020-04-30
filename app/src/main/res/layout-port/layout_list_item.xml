@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/lay"
+<LinearLayout android:id="@+id/lay"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/colorwhite"
     android:orientation="horizontal"
     android:paddingLeft="15dp"
     android:paddingRight="15dp"
-    android:paddingTop="1dp"
-    android:paddingBottom="1dp">
+    android:paddingBottom="1dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <!--item的height要固定，否则嵌套view会导致计数问题-->
     <!--https://www.iteye.com/blog/fantaxy025025-1897771-->
     <LinearLayout
@@ -17,12 +17,13 @@
         android:orientation="horizontal"
         android:layout_weight="1">
 
-        <com.playhard.studentmgr.MyView.CustomRoundAngleImageView
+        <com.makeramen.roundedimageview.RoundedImageView
             android:id="@+id/iv"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:scaleType="fitXY"
             android:layout_gravity="center"
+            app:riv_oval="true"
             />
 
     </LinearLayout>
@@ -47,7 +48,7 @@
                 android:text="姓名："
                 android:paddingLeft="20dp"
                 android:paddingRight="10dp"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 android:gravity="center"
                 android:textColor="@color/colorBlack"/>
 
@@ -57,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:layout_gravity="center"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 android:textAlignment="center"
                 android:text="测试测试测试测试"
                 android:singleLine="true"
@@ -76,7 +77,7 @@
                 android:text="学号："
                 android:paddingLeft="20dp"
                 android:paddingRight="10dp"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 android:gravity="center"
                 android:textColor="@color/colorBlack"/>
 
@@ -86,7 +87,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:layout_gravity="center"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 android:textAlignment="center"
                 android:text="测试测试测试测试"
                 android:singleLine="true"
@@ -106,7 +107,7 @@
                 android:text="性别："
                 android:paddingLeft="20dp"
                 android:paddingRight="10dp"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 android:gravity="center"
                 android:textColor="@color/colorBlack"/>
 
@@ -116,7 +117,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:layout_gravity="center"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 android:textAlignment="center"
                 android:text="测试测试测试测试"
                 android:singleLine="true"
@@ -124,65 +125,64 @@
                 />
         </LinearLayout>
 
-        <LinearLayout
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+            <!--<TextView-->
+                <!--android:id="@+id/tag_falc"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="学院："-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:textSize="10sp"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="@color/colorBlack"/>-->
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/tag_falc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="学院："
-                android:paddingLeft="20dp"
-                android:paddingRight="10dp"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:textColor="@color/colorBlack"/>
+            <!--<TextView-->
+                <!--android:id="@+id/tv_falc"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:textSize="10sp"-->
+                <!--android:textAlignment="center"-->
+                <!--android:text="测试测试测试测试"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@color/colorBlack"-->
+                <!--/>-->
+        <!--</LinearLayout>-->
 
-            <TextView
-                android:id="@+id/tv_falc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:layout_gravity="center"
-                android:textSize="20sp"
-                android:textAlignment="center"
-                android:text="测试测试测试测试"
-                android:singleLine="true"
-                android:textColor="@color/colorBlack"
-                />
-        </LinearLayout>
+        <!--<LinearLayout-->
 
-        <LinearLayout
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+            <!--<TextView-->
+                <!--android:id="@+id/tag_spec"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="专业："-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:paddingRight="10dp"-->
+                <!--android:textSize="10sp"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="@color/colorBlack"/>-->
 
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:id="@+id/tag_spec"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="专业："
-                android:paddingLeft="20dp"
-                android:paddingRight="10dp"
-                android:textSize="20sp"
-                android:gravity="center"
-                android:textColor="@color/colorBlack"/>
-
-            <TextView
-                android:id="@+id/tv_spec"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:layout_gravity="center"
-                android:textSize="20sp"
-                android:textAlignment="center"
-                android:text="测试测试测试测试"
-                android:singleLine="true"
-                android:textColor="@color/colorBlack"
-                />
-        </LinearLayout>
+            <!--<TextView-->
+                <!--android:id="@+id/tv_spec"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:paddingLeft="20dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:textSize="10sp"-->
+                <!--android:textAlignment="center"-->
+                <!--android:text="测试测试测试测试"-->
+                <!--android:singleLine="true"-->
+                <!--android:textColor="@color/colorBlack"-->
+                <!--/>-->
+        <!--</LinearLayout>-->
 
         <LinearLayout
 
@@ -196,7 +196,7 @@
                 android:text="爱好："
                 android:paddingLeft="20dp"
                 android:paddingRight="10dp"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 android:gravity="center"
                 android:textColor="@color/colorBlack"/>
 
@@ -206,7 +206,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:layout_gravity="center"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 android:textAlignment="center"
                 android:text="测试测试测试测试"
                 android:singleLine="true"
@@ -226,7 +226,7 @@
                 android:text="生日："
                 android:paddingLeft="20dp"
                 android:paddingRight="10dp"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 android:gravity="center"
                 android:textColor="@color/colorBlack"/>
 
@@ -236,7 +236,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="20dp"
                 android:layout_gravity="center"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 android:textAlignment="center"
                 android:text="测试测试测试测试"
                 android:singleLine="true"

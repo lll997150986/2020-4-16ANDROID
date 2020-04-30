@@ -4,33 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.playhard.studentmgr.thirdAndFourthHomeWork.ActivityLogin"
-    android:orientation="vertical"
-    android:background="@drawable/bg_img2">
+    tools:context="com.playhard.studentmgr.activity.ActivityLogin"
+    android:orientation="vertical">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/loginTb"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/colorPrimary"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
-
+    <include layout="@layout/title_bar"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:orientation="vertical"
-        ></LinearLayout>
-    <!--一分为三，三分之二为控件-->
+        android:orientation="vertical">
+    </LinearLayout>
+
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
+        android:layout_weight="9"
         android:orientation="vertical"
-        android:layout_gravity="center_horizontal"
-        >
+        android:layout_gravity="center_horizontal">
 
         <!--logo-->
         <RelativeLayout
@@ -40,8 +31,9 @@
             android:layout_gravity="center_horizontal">
             <View
                 android:layout_width="220dp"
-                android:layout_height="50dp"
-                android:background="@drawable/logo"/>
+                android:layout_height="70dp"
+                android:background="@drawable/logo"
+                android:backgroundTint="@color/colorOran"/>
         </RelativeLayout>
 
         <!--表单-->
@@ -57,31 +49,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:textSize="18sp"
-                android:hint="账号"
+                android:hint="输入账号"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:singleLine="true"
                 android:background="@drawable/bg_username"
-                android:drawableLeft="@drawable/addpeople_fill1"
+                android:backgroundTint="@color/colorGray5"
+                android:drawableLeft="@drawable/user"
                 android:drawablePadding="15dp"
-                android:focusable="true"/>
+                android:focusable="true"
+                >
+                <requestFocus/>
+            </EditText>
 
 
             <EditText
-                android:id="@+id/mpass"
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="15dp"
                 android:layout_below="@id/username"
                 android:textSize="18sp"
-                android:hint="密码"
+                android:hint="输入密码"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
 
                 android:inputType="textPassword"
                 android:singleLine="true"
                 android:background="@drawable/bg_username"
-                android:drawableLeft="@drawable/group"
+                android:backgroundTint="@color/colorGray5"
+                android:drawableLeft="@drawable/password"
                 android:drawablePadding="15dp"/>
 
             <Button
@@ -90,7 +87,7 @@
                 android:layout_height="50dp"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:layout_below="@id/mpass"
+                android:layout_below="@id/password"
                 android:layout_marginTop="35dp"
                 android:textSize="16sp"
                 android:text="登录"
@@ -98,50 +95,137 @@
                 android:background="@drawable/btn_login"/>
 
             <LinearLayout
+                android:id="@+id/hrefs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btnLogin"
-                android:layout_marginTop="15dp"
-                android:orientation="vertical">
+                android:layout_marginTop="18dp"
+
+                android:orientation="horizontal">
                 <TextView
-                    android:id="@+id/fail"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/regist_href"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right"
-                    android:text="无法登录？"
+                    android:layout_marginLeft="10dp"
+                    android:text="注    册"
+                    android:background="@drawable/list_item" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"/>
+                <TextView
+                    android:id="@+id/fail_href"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="无法登录"
                     android:background="@drawable/list_item"
                    />
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/lwaitframe"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/btnLogin"
-                android:orientation="vertical">
-                <ProgressBar
-                    android:id="@+id/lpb"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"/>
-
-            </LinearLayout>
-            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/lwaitframe"
-                android:gravity="bottom"
+                android:layout_below="@id/hrefs"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
                 android:orientation="vertical">
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-                    android:gravity="center"
-                    android:paddingTop="10dp"
-                    android:layout_marginBottom="50dp"
-                    android:textAllCaps="false"
-                    android:text="©2020-202. All rights reserved. "/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/colorGray2"
+                        android:layout_weight="2"
+                       android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="一键登录"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:layout_gravity="center"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:background="@color/colorGray2"
+                        android:layout_weight="2"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <!--<ImageView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content" />-->
+                        <TextView
+                            android:id="@+id/wechat_href"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/wechat"
+                            android:gravity="center"
+                            android:drawableTop="@drawable/wechat"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+                        <TextView
+                            android:id="@+id/qq_href"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/QQ"
+                            android:gravity="center"
+                            android:drawableTop="@drawable/qq"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="1">
+                        <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content" />-->
+                        <TextView
+                            android:id="@+id/weibo_href"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/weibo"
+                            android:gravity="center"
+                            android:drawableTop="@drawable/weibo"/>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_gravity="bottom"
+                        android:gravity="center|bottom"
+                        android:layout_weight="1"
+                        android:paddingTop="10dp"
+                        android:layout_marginBottom="60dp"
+                        android:textAllCaps="false"
+                        android:text="©2020-202. All rights reserved. "/>
+
             </LinearLayout>
 
 

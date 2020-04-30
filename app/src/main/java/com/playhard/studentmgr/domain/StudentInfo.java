@@ -18,6 +18,7 @@ public class StudentInfo extends DataSupport implements Serializable{
     private  String falculty;
     private String sex;
     private String birth;
+    private String photo;
 
     public StudentInfo() {
     }
@@ -30,6 +31,7 @@ public class StudentInfo extends DataSupport implements Serializable{
         this.falculty = falculty;
         this.sex = sex;
         this.birth = birth;
+        photo = null;
     }
 
     @Override
@@ -97,5 +99,13 @@ public class StudentInfo extends DataSupport implements Serializable{
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    public String getPhoto() {
+        return photo;
+    }
+
+    public void setPhoto(String photo) {
+        this.photo = photo;
     }
 }

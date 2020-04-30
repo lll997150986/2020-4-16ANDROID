@@ -2,15 +2,15 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 <group android:checkableBehavior="single">
     <!--只能单选-->
-    <item android:id="@+id/nav_map"
-        android:icon="@drawable/map"
-        android:title="位置查询"/>
+    <item android:id="@+id/nav_backcolor"
+        android:icon="@drawable/backcolor"
+        android:title="背景设置"/>
     <item android:id="@+id/nav_friend"
         android:icon="@drawable/friend"
         android:title="我的好友"/>
     <item android:id="@+id/nav_mail"
         android:icon="@drawable/email"
-        android:title="发邮件"/>
+        android:title="发送邮件"/>
     <item android:id="@+id/nav_set"
         android:icon="@drawable/set"
         android:title="个人设置"/>

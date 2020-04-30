@@ -11,7 +11,8 @@
     <color name="colorGray5">#F2F7F7F7</color>
     <color name="colorpurple">#A07096</color>
 
-    <color name="colorblue">#41B3CF</color>
+    <color name="colorblue1">#41B3CF</color>
+    <color name="colorblue0">#F0FDFD</color>
     <color name="colorblue2">#2222FF</color>
     <color name="colorblue3">#3F51b5</color>
     <color name="colorgreen">#70A070</color>
@@ -19,6 +20,7 @@
     <color name="coloryellow">#F8F819</color>
     <color name="colorbrown">#A89B69</color>
     <color name="colorwhite">#FFFFFF</color>
+    <color name="colorBar">#E97F39</color>
     <color name="colorTran">#00000000</color>
     <color name="colorOran">#99FF9900</color>
     <color name="colorDiagGray">#EEEEEE</color>

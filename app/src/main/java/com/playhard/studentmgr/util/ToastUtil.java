@@ -17,7 +17,7 @@ public class ToastUtil {
     private static Toast toast;
     private static Toast itoast;
     private  static  View toastview;
-    public static  void putMessage(Context context,String message){
+    public static  void  putMessage(Context context,String message){
         if (toast==null){
             toast = Toast.makeText(context,message,Toast.LENGTH_SHORT);
         }

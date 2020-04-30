@@ -2,42 +2,34 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:orientation="vertical"
-    android:padding="20dp"
-    android:layout_marginTop="40dp">
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="5dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginRight="10dp">
+    android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:orientation="horizontal"
+        android:background="@color/colorblue0"
         android:gravity="center">
         <SearchView
-            android:id="@+id/sv"
+            android:id="@+id/search_view"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="4"></SearchView>
-        <Button
-            android:id="@+id/btn_search"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/btn_login"
-            android:gravity="center"
-            android:text="查询" />
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/bg_username"
+            android:layout_weight="1"></SearchView>
     </LinearLayout>
-    <ListView
-        android:id="@+id/lv"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        />
+    <!--<ListView-->
+        <!--android:id="@+id/search_panel"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--/>-->
 
 </LinearLayout>
 

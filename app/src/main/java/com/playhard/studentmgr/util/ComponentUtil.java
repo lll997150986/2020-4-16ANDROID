@@ -1,13 +1,9 @@
 package com.playhard.studentmgr.util;
 
-import android.preference.EditTextPreference;
-import android.preference.Preference;
-import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.playhard.studentmgr.eighthHonmeWork.ActivityConfig;
+import com.playhard.studentmgr.activity.ActivityConfig;
 
 /**
  * Created by user on 2020/4/16.

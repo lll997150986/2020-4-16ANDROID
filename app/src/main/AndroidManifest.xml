@@ -3,55 +3,36 @@
     package="com.playhard.studentmgr">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
 
-    <!--baiduMao-->
-    <!--<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />-->
-    <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />-->
-    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
-    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
-    <!--<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />-->
-    <!--<uses-permission android:name="android.permission.READ_PHONE_STATE" />-->
-    <!--<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />-->
-    <!--<uses-permission android:name="android.permission.WAKE_LOCK" />-->
 
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality. 
-    -->
+    <!-- baiduMao -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> -->
+    <!-- <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> -->
+    <!-- <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> -->
+    <!-- <uses-permission android:name="android.permission.READ_PHONE_STATE" /> -->
+    <!-- <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" /> -->
+    <!-- <uses-permission android:name="android.permission.WAKE_LOCK" /> -->
+
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:name="org.litepal.LitePalApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:configChanges="orientation|screenSize"
+        android:icon="@mipmap/ic_chat"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/netword_security_config"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_chat"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme2">
         <activity
-            android:name=".firstHomeWork.ActivityStudent"
-            android:configChanges="orientation|screenSize" />
-        <activity
-            android:name=".firstHomeWork.MainActivity"
-            android:configChanges="orientation|screenSize" />
-        <activity
-            android:name=".firstHomeWork.MainActivity$ListViewActivity"
-            android:configChanges="orientation|screenSize" />
-        <activity
-            android:name=".secondHomeWork.ActivityMain"
-            android:configChanges="orientation|screenSize" />
-        <activity
-            android:name=".secondHomeWork.ActivityStudent2"
-            android:configChanges="orientation|screenSize"
-            android:label="添加信息"
-            android:theme="@style/AppTheme2" />
-        <activity
-            android:name=".thirdAndFourthHomeWork.ActivityLogin"
-            android:configChanges="orientation|screenSize"
-            android:label="WuZhiJing"
-            android:theme="@style/AppTheme2">
+            android:name=".activity.ActivityLogin"
+            android:theme="@style/AppTheme2"
+            android:windowSoftInputMode="stateVisible">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -59,41 +40,37 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".thirdAndFourthHomeWork.ActivityMain"
-            android:configChanges="orientation|screenSize"
-            android:label="三年一班"
+            android:name=".activity.ActivityMain"
             android:theme="@style/AppTheme2" />
+        <activity android:name=".activity.ActivityAddFriend" />
+
+        <!-- <activity -->
+        <!-- android:name=".FifthHomeWork.adActivity" -->
+        <!-- android:configChanges="orientation|screenSize" -->
+        <!-- android:theme="@style/Theme.AppCompat.NoActionBar" /> -->
+        <activity android:name=".activity.lifecycle.FirstActivity" />
+        <activity android:name=".activity.lifecycle.SecondActivity" />
         <activity
-            android:name=".FifthHomeWork.adActivity"
-            android:configChanges="orientation|screenSize"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity
-            android:name=".SixthHomeWork.FirstActivity"
-            android:theme="@style/AppTheme2" />
-        <activity
-            android:name=".SixthHomeWork.SecondActivity"
-            android:theme="@style/AppTheme2" />
-        <activity
-            android:name=".SixthHomeWork.ThirdActivity"
+            android:name=".activity.lifecycle.ThirdActivity"
             android:theme="@style/Theme.AppCompat.Dialog" />
-        <activity
-            android:name=".SixthHomeWork.FourthActivity"
-            android:theme="@style/AppTheme2" />
-        <activity android:name=".seventhHomeWork.ActivityPhonePlace">
+        <activity android:name=".activity.lifecycle.FourthActivity" />
+        <activity android:name=".activity.ActivityPhonePlace">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".eighthHonmeWork.ActivityConfig" />
-        <activity
-            android:name=".eighthHonmeWork.FriendInfoActivity"
-            android:theme="@style/AppTheme2" />
-        <activity android:name=".eighthHonmeWork.BaiDuMapActivity"></activity>
+        <activity android:name=".activity.ActivityConfig" />
+        <activity android:name=".activity.FriendInfoActivity" />
+        <!-- android:theme="@style/AppTheme2" /> -->
+        <activity android:name=".activity.RegistActivity" />
 
-
+        <provider
+            android:name=".custom.StudentContentProvider"
+            android:authorities="com.playhard.studentmgr.provider"
+            android:enabled="true"
+            android:exported="true"></provider>
     </application>
-
 
 </manifest>
